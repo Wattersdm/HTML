@@ -1,0 +1,24 @@
+﻿@model web2.Models.User
+@{
+	ViewBag.Title = "More About Us";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>When not busy doing schoolwork, @Model.FirstName @Model.LastName is normally found playing with his two sons at the park. </p>
+
+<style>
+	.user-image-container {
+		height: unset;
+	}
+</style>
+@using (Html.BeginForm(FormMethod.Post)) {
+	<div class="section">
+		<button class="button-cancel" id="btnClose" name="btnSubmit" value="close"><i class='fa fa-times'></i> Close</button>
+	</div>
+}
+
+	<script>
+	$(document).ready(function () {
+		SetActiveMenus('aboutus');
+	});
+	</script>
